@@ -1,0 +1,70 @@
+
+
+{{>footer}}
+
+<h1 style=font-size:100px>Eduardo's CV</h1>
+
+<style>
+body {
+  background-image: url('/img/pokemon.jpg');
+}
+</style> 
+<div class="container">
+
+    <div class = "container" id = "cont-index">
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid p-4">
+                    <div class ="row">
+                        {{#each articulo}}
+                        <div class="col-md-4">
+                            <div class="card text center">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <center>
+                                            <h3>
+                                                {{categoria}}
+                                            </h3>
+
+                                        </center>
+                                    </div>
+                                    <div class="form-group">
+                                        <img src="{{img}}" alt ="{{nombre}}"
+                                        height="150px" width="200px">
+                                    </div>
+                                    <div class="form-group">
+                                        <center>
+                                            <h2>{{nombre}}</h2>
+                                        </center>
+                                    </div>
+                                    <div class="form-group">
+                                        <center>
+                                            <p>{{descripcion}}</p>
+                                        </center>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="/GowPlay/delete/{{id}}"class="btn btn-danger d-block">
+                                            ELIMINAR
+                                        </a>
+                                        <a href="edit/{{id}}"class="btn btn-twitter d-block">
+                                            EDITAR
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
